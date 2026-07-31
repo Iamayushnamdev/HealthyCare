@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { Reveal, SectionHeading } from './ui';
-import { whyChooseUs } from '../data/clinic';
+import { motion } from "framer-motion";
+import { Reveal, SectionHeading } from "./ui";
+import { whyChooseUs } from "../data/clinic";
 
 export default function WhyChooseUs() {
   return (
@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
         <SectionHeading
           eyebrow="Why Choose Us"
           title="Healthcare designed around you"
-          subtitle="We\u2019ve reimagined the clinic visit to be calm, transparent and genuinely caring — so you always leave feeling informed and looked after."
+          subtitle="We’ve reimagined the clinic visit to be calm, transparent and genuinely caring — so you always leave feeling informed and looked after."
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -22,13 +22,17 @@ export default function WhyChooseUs() {
               <Reveal key={item.title} delay={i * 0.1}>
                 <motion.div
                   whileHover={{ y: -6 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   className="group relative h-full overflow-hidden rounded-3xl border border-slate-100 bg-white p-7 text-center shadow-card dark:border-white/10 dark:bg-secondary-800"
                 >
                   <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-primary/10 text-primary transition-all duration-500 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-accent group-hover:text-white group-hover:shadow-glow dark:bg-accent/10 dark:text-accent-400">
                     <motion.span
                       animate={{ y: [0, -4, 0] }}
-                      transition={{ duration: 3 + i, repeat: Infinity, ease: 'easeInOut' }}
+                      transition={{
+                        duration: 3 + i,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
                     >
                       <Icon className="text-2xl" />
                     </motion.span>

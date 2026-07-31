@@ -1,13 +1,28 @@
-import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
-import { Reveal, SectionHeading } from './ui';
-import { clinic } from '../data/clinic';
+import { motion } from "framer-motion";
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaClock,
+} from "react-icons/fa";
+import { Reveal, SectionHeading } from "./ui";
+import { clinic } from "../data/clinic";
 
 const items = [
-  { icon: FaMapMarkerAlt, label: 'Visit Us', value: clinic.address },
-  { icon: FaPhoneAlt, label: 'Call Us', value: clinic.phoneDisplay, href: `tel:${clinic.phone.replace(/\s/g, '')}` },
-  { icon: FaEnvelope, label: 'Email Us', value: clinic.email, href: `mailto:${clinic.email}` },
-  { icon: FaClock, label: 'Working Hours', value: clinic.hours },
+  { icon: FaMapMarkerAlt, label: "Visit Us", value: clinic.address },
+  {
+    icon: FaPhoneAlt,
+    label: "Call Us",
+    value: clinic.phoneDisplay,
+    href: `tel:${clinic.phone.replace(/\s/g, "")}`,
+  },
+  {
+    icon: FaEnvelope,
+    label: "Email Us",
+    value: clinic.email,
+    href: `mailto:${clinic.email}`,
+  },
+  { icon: FaClock, label: "Working Hours", value: clinic.hours },
 ];
 
 export default function Contact() {
@@ -16,7 +31,7 @@ export default function Contact() {
       <div className="container-px">
         <SectionHeading
           eyebrow="Contact"
-          title="We\u2019re here when you need us"
+          title="We’re here when you need us"
           subtitle="Reach out by phone, email, or visit us in person at our Bhopal clinic. Walk-ins are welcome during working hours."
         />
 
@@ -25,12 +40,12 @@ export default function Contact() {
             <div className="grid h-full grid-cols-1 gap-4 sm:grid-cols-2">
               {items.map((item, i) => {
                 const Icon = item.icon;
-                const Wrapper = item.href ? 'a' : 'div';
+                const Wrapper = item.href ? "a" : "div";
                 return (
                   <motion.div
                     key={i}
                     whileHover={{ y: -4 }}
-                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     className="rounded-3xl border border-slate-100 bg-white p-6 shadow-card dark:border-white/10 dark:bg-secondary-800"
                   >
                     <Wrapper
